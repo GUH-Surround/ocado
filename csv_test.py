@@ -196,8 +196,8 @@ def read_orders():
         orders = []
         for line in enumerate(r):
             orders.append(line)
-        return orders
         f.close()
+        return orders
 
 def read_my_lines(csv_reader, lines_list):
     print (lines_list)
@@ -209,7 +209,7 @@ def read_my_lines(csv_reader, lines_list):
 
 
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     orders = read_orders()
     #print orders
     no_orders = int(orders[len(orders)-1][1]['ORDER_ID'])
