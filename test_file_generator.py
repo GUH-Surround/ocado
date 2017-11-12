@@ -17,7 +17,7 @@ if __name__ == '__main__':
     with open("test_data.csv", "w") as csvfile:
         o = csv.writer(csvfile)
         for d in test_data:
-            d = list(map(str,d))
+            d = map(str,d)
             print (d)
             o.writerow(d)
         csvfile.close()
