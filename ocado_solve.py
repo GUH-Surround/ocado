@@ -1,5 +1,6 @@
 import itertools
 
+
 # categorize into a list of lists of products(dicts)
 def get_categories(order):
     categories = [[] for x in range(8)]
@@ -27,6 +28,7 @@ def get_categories(order):
             categories[7].append(product)
 
     return categories
+
 
 # product keys - SKU_ID, EACH_HEIGHT, EACH_WIDTH, EACH_LENGTH, EACH_WEIGHT, EACH_VOLUME
 def package(products):
@@ -69,8 +71,6 @@ def package(products):
     return result_list
 
 
-
-
 def process_order(order):
     # categories to be processed together:
     #   [1,2] ; [3] ; [4] ; [5] ; [6] ; [4,7] ; [7,8] ; [8]
@@ -83,15 +83,10 @@ def process_order(order):
     for trash in boxed_products:
         print(trash)
 
-    print("------------")
-
-    # coab : corresponding <i forgot the rest>
+    # coab : corresponding <i forgot the rest of the acronym>
     coab = []
     for boxed_category in boxed_products:
         coab.append(boxed_category[len(boxed_category) - 1][0])
-
-    print(coab)
-    print("------------")
 
     # late night tired magic don't touch
     for i in range(1, len(boxed_products)):
@@ -99,10 +94,4 @@ def process_order(order):
             # print(i, boxed_products[i][0][0])
             boxed_products[i][j][0] = boxed_products[i][j][0] + sum(coab[:i])
 
-
     return list(itertools.chain(*boxed_products))
-
-
-
-
-
