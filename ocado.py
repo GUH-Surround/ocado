@@ -62,7 +62,7 @@ if __name__ == '__main__':
     # Each element is a list of the product IDs of the indexed order (+1)
     index_dict = {}
     reverse_index_dict = {}
-    cur_index=0
+    cur_index = 0
     order_lists = []
 
     for i in range(0, len(orders)):
@@ -81,26 +81,7 @@ if __name__ == '__main__':
     print("Time to t2:", time.time() - t1)
     t2 = time.time()
 
-    #print(order_lists)
-
     order_queries = []
-    print(orders)
-
-
-    # Now we want to return a dictionary for every product in a particular order
-    # with open('product.csv') as f:
-    #      r = csv.DictReader(f)
-    #      for i in range(0, len(order_lists)):
-    #          current_order_list = []
-    #          for line_number, line in read_my_lines(r, order_lists[i]):
-    #              # print (line_number, line)
-    #              for key in line:
-    #                  line[key] = float(line[key])
-    #              current_order_list.append(line)
-    #
-    #           # [dict([a, float(x)] for a, x in b.items()) for b in current_order_list]
-    #          order_queries.append(current_order_list)
-    #      f.close()
 
     order_queries = fast_load(order_lists)
 
@@ -111,11 +92,18 @@ if __name__ == '__main__':
     #   of lists of dictionaries containing information about a single
     #   product
     offset = 0
-    for i in range(len(order_queries)):
-        result = ocado_solve.process_order(order_queries[i], offset)
-        offset = result[len(result)-1][0]
+    with open("spotify_dot_exe_stopped_working.rule_10.csv", "w") as o:
+        writer = csv.writer(o)
+        writer.writerow(['ORDER_ID', 'CONTAINER_ID', 'SKU_ID'])
+        for i in range(len(order_queries)):
+            result = ocado_solve.process_order(order_queries[i], offset)
+            offset = result[len(result) - 1][0]
 
-        for r in result:
-            print(reverse_index_dict[i], r[0], r[1])
-    #print(ocado_solve.process_order(order_queries[0]))
+            for r in result:
+                writer.writerow(list(map(str,[reverse_index_dict[i], r[0], r[1]])))
+
+
+        o.close()
+
+
     print("Time to finish:", time.time() - t3)

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="055371db-1ceb-4df0-afbb-48934608addf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.~lock.sample1.csv#" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.~lock.orderBoi.csv#" afterPath="$PROJECT_DIR$/.~lock.orderBoi.csv#" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ocado.py" afterPath="$PROJECT_DIR$/ocado.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ocado_solve.py" afterPath="$PROJECT_DIR$/ocado_solve.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_data.csv" afterPath="$PROJECT_DIR$/test_data.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ocado.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ocado.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ocado.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="115" column="40" lean-forward="false" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
+            <state relative-caret-position="646">
+              <caret line="96" column="60" lean-forward="false" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
               <folding>
                 <element signature="e#281#479#0" expanded="false" />
                 <element signature="e#531#731#0" expanded="false" />
@@ -40,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ocado_solve.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ocado_solve.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ocado_solve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="111" column="21" lean-forward="true" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
+            <state relative-caret-position="564">
+              <caret line="120" column="63" lean-forward="false" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -74,8 +72,8 @@
         <option value="$PROJECT_DIR$/csv_test.py" />
         <option value="$PROJECT_DIR$/Types.py" />
         <option value="$PROJECT_DIR$/test_file_generator.py" />
-        <option value="$PROJECT_DIR$/ocado.py" />
         <option value="$PROJECT_DIR$/ocado_solve.py" />
+        <option value="$PROJECT_DIR$/ocado.py" />
       </list>
     </option>
   </component>
@@ -86,9 +84,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="992" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="928" />
+    <option name="width" value="610" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -158,7 +156,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="992" y="24" width="928" height="1056" extended-state="4" />
+    <frame x="65" y="24" width="610" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -216,6 +214,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Types.py" />
     <entry file="file://$PROJECT_DIR$/csv_test.py" />
+    <entry file="file://$PROJECT_DIR$/ocado_solve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="120" column="63" lean-forward="false" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_file_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -226,20 +232,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ocado.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="115" column="40" lean-forward="false" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
+        <state relative-caret-position="646">
+          <caret line="96" column="60" lean-forward="false" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
           <folding>
             <element signature="e#281#479#0" expanded="false" />
             <element signature="e#531#731#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocado_solve.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="111" column="21" lean-forward="true" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>

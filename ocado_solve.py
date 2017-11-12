@@ -99,7 +99,6 @@ def package(products):
         else:
             current_lower_z = current_upper_z
             current_x = 0
-        # print(current_id, current_x, current_lower_z, current_upper_z, max_height_reached)
 
     return result_list
 
@@ -120,8 +119,6 @@ def process_order(order, offset):
     coab = []
     for boxed_category in boxed_products:
         coab.append(boxed_category[len(boxed_category) - 1][0])
-
-    #print(coab)
 
     # late night tired magic don't touch
     for j in range(len(boxed_products[0])):
