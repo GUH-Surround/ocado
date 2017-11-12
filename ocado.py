@@ -60,11 +60,22 @@ if __name__ == '__main__':
     no_orders = int(orders[len(orders) - 1][1]['ORDER_ID'])
     # This will be a list of lists
     # Each element is a list of the product IDs of the indexed order (+1)
+    index_dict = {}
+    reverse_index_dict = {}
+    cur_index=0
     order_lists = []
-    for i in range(0, no_orders):
-        order_lists.append([])
+
     for i in range(0, len(orders)):
-        index = int(orders[i][1]['ORDER_ID']) - 1
+
+        if int(orders[i][1]['ORDER_ID']) in index_dict:
+            index = index_dict[int(orders[i][1]['ORDER_ID'])]
+        else:
+            order_lists.append([])
+            index_dict[int(orders[i][1]['ORDER_ID'])] = cur_index
+            reverse_index_dict[cur_index] = int(orders[i][1]['ORDER_ID'])
+            index = cur_index
+            cur_index += 1
+
         order_lists[index].append(int(orders[i][1]['SKU_ID']))
 
     print("Time to t2:", time.time() - t1)
@@ -73,7 +84,7 @@ if __name__ == '__main__':
     #print(order_lists)
 
     order_queries = []
-
+    print(orders)
 
 
     # Now we want to return a dictionary for every product in a particular order
@@ -102,9 +113,9 @@ if __name__ == '__main__':
     offset = 0
     for i in range(len(order_queries)):
         result = ocado_solve.process_order(order_queries[i], offset)
-        offset += len(result)
+        offset = result[len(result)-1][0]
 
         for r in result:
-            print(i+1, r[0], r[1])
+            print(reverse_index_dict[i], r[0], r[1])
     #print(ocado_solve.process_order(order_queries[0]))
     print("Time to finish:", time.time() - t3)

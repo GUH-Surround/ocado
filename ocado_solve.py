@@ -14,16 +14,16 @@ def get_categories(order):
             categories[1].append(product)
         if int(product["SEGREGATION_CATEGORY"]) == 4:
             categories[2].append(product)
-            categories[5].append(product)
+            #categories[5].append(product)
         if int(product["SEGREGATION_CATEGORY"]) == 5:
             categories[3].append(product)
         if int(product["SEGREGATION_CATEGORY"]) == 6:
             categories[4].append(product)
         if int(product["SEGREGATION_CATEGORY"]) == 7:
-            categories[5].append(product)
+            #categories[5].append(product)
             categories[6].append(product)
         if int(product["SEGREGATION_CATEGORY"]) == 8:
-            categories[6].append(product)
+            #categories[6].append(product)
             categories[7].append(product)
 
     return categories
@@ -52,7 +52,9 @@ def package(products):
     current_x = 0.0
     current_lower_z = 0.0
     current_upper_z = 0.0
+    current_weight = 0.0
     while len(products) > 0:
+        max_weight_reached = True
         max_height_reached = True
 
         for prod in products:
@@ -73,19 +75,26 @@ def package(products):
 
             elif current_x + prod["EACH_WIDTH"] <= 55.0:
                 if current_lower_z + prod["EACH_HEIGHT"] <= 33.0:
-                    result_list.append([current_id, int(prod["SKU_ID"])])
-                    products.remove(prod)
-                    # update box x val
-                    current_x += prod["EACH_WIDTH"]
-                    # check if max_height should be updated
-                    if current_upper_z + prod["EACH_HEIGHT"] > current_upper_z:
-                        current_upper_z += prod["EACH_HEIGHT"]
+                    if current_weight + prod["EACH_WEIGHT"] <= 16.0:
+                        result_list.append([current_id, int(prod["SKU_ID"])])
+                        products.remove(prod)
+                        # update box x val
+                        current_x += prod["EACH_WIDTH"]
+                        # check if max_height should be updated
+                        if current_upper_z + prod["EACH_HEIGHT"] > current_upper_z:
+                            current_upper_z += prod["EACH_HEIGHT"]
+                elif current_weight + prod["EACH_WEIGHT"] <= 16.0:
+                    max_weight_reached = False
             elif current_lower_z + prod["EACH_HEIGHT"] <= 33.0:
                 max_height_reached = False
+            elif current_weight + prod["EACH_WEIGHT"] <= 16.0:
+                max_weight_reached = False
 
-        if max_height_reached:
+        if max_height_reached or max_weight_reached:
             current_x = 0
             current_lower_z = 0
+            current_upper_z = 0
+            current_weight = 0
             current_id += 1
         else:
             current_lower_z = current_upper_z
@@ -115,6 +124,8 @@ def process_order(order, offset):
     #print(coab)
 
     # late night tired magic don't touch
+    for j in range(len(boxed_products[0])):
+        boxed_products[0][j][0] = boxed_products[0][j][0] + offset
     for i in range(1, len(boxed_products)):
         for j in range(len(boxed_products[i])):
             boxed_products[i][j][0] = boxed_products[i][j][0] + sum(coab[:i]) + offset
