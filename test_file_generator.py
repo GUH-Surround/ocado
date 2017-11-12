@@ -16,8 +16,9 @@ if __name__ == '__main__':
         #print (test_data)
     with open("test_data.csv", "w") as csvfile:
         o = csv.writer(csvfile)
+        o.writerow(["ORDER_ID", "SKU_ID"])
         for d in test_data:
-            d = map(str,d)
+            d = list(map(str,d))
             print (d)
             o.writerow(d)
         csvfile.close()
