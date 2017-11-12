@@ -121,10 +121,11 @@ def process_order(order, offset):
         coab.append(boxed_category[len(boxed_category) - 1][0])
 
     # late night tired magic don't touch
-    for j in range(len(boxed_products[0])):
-        boxed_products[0][j][0] = boxed_products[0][j][0] + offset
-    for i in range(1, len(boxed_products)):
-        for j in range(len(boxed_products[i])):
-            boxed_products[i][j][0] = boxed_products[i][j][0] + sum(coab[:i]) + offset
+    if (len(boxed_products) > 0):
+        for j in range(len(boxed_products[0])):
+            boxed_products[0][j][0] = boxed_products[0][j][0] + offset
+        for i in range(1, len(boxed_products)):
+            for j in range(len(boxed_products[i])):
+                boxed_products[i][j][0] = boxed_products[i][j][0] + sum(coab[:i]) + offset
 
     return list(itertools.chain(*boxed_products))

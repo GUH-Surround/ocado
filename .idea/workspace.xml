@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="055371db-1ceb-4df0-afbb-48934608addf" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.~lock.orderBoi.csv#" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.~lock.spotify_dot_exe_stopped_working.rule_10.csv#" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.~lock.product.csv#" afterPath="$PROJECT_DIR$/.~lock.product.csv#" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ocado.py" afterPath="$PROJECT_DIR$/ocado.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ocado_solve.py" afterPath="$PROJECT_DIR$/ocado_solve.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order.csv" afterPath="$PROJECT_DIR$/order.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.csv" afterPath="$PROJECT_DIR$/product.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spotify_dot_exe_stopped_working.rule_10.csv" afterPath="$PROJECT_DIR$/spotify_dot_exe_stopped_working.rule_10.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_data.csv" afterPath="$PROJECT_DIR$/test_data.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_file_generator.py" afterPath="$PROJECT_DIR$/test_file_generator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,12 +26,9 @@
       <file leaf-file-name="ocado.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ocado.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="96" column="60" lean-forward="false" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
-              <folding>
-                <element signature="e#281#479#0" expanded="false" />
-                <element signature="e#531#731#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="612">
+              <caret line="46" column="80" lean-forward="false" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -32,8 +37,10 @@
         <entry file="file://$PROJECT_DIR$/test_file_generator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding />
+              <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+              <folding>
+                <marker date="1510497013123" expanded="true" signature="328:473" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,8 +48,8 @@
       <file leaf-file-name="ocado_solve.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ocado_solve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="120" column="63" lean-forward="false" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
+            <state relative-caret-position="1186">
+              <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,8 +78,8 @@
       <list>
         <option value="$PROJECT_DIR$/csv_test.py" />
         <option value="$PROJECT_DIR$/Types.py" />
-        <option value="$PROJECT_DIR$/test_file_generator.py" />
         <option value="$PROJECT_DIR$/ocado_solve.py" />
+        <option value="$PROJECT_DIR$/test_file_generator.py" />
         <option value="$PROJECT_DIR$/ocado.py" />
       </list>
     </option>
@@ -84,9 +91,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="65" />
+    <option name="x" value="75" />
     <option name="y" value="24" />
-    <option name="width" value="610" />
+    <option name="width" value="928" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -156,20 +163,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="610" height="1056" extended-state="4" />
+    <frame x="75" y="24" width="928" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -195,12 +202,61 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ocado.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="102" column="60" lean-forward="false" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_file_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <marker date="1510497013123" expanded="true" signature="328:473" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocado_solve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2178">
+          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocado.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_file_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
-            <element signature="e#281#479#0" expanded="false" />
-            <element signature="e#531#731#0" expanded="false" />
+            <marker date="1510497013123" expanded="true" signature="328:473" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocado_solve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="120" column="63" lean-forward="false" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocado.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -216,8 +272,8 @@
     <entry file="file://$PROJECT_DIR$/csv_test.py" />
     <entry file="file://$PROJECT_DIR$/ocado_solve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="120" column="63" lean-forward="false" selection-start-line="120" selection-start-column="63" selection-end-line="120" selection-end-column="63" />
+        <state relative-caret-position="1186">
+          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -225,19 +281,18 @@
     <entry file="file://$PROJECT_DIR$/test_file_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding />
+          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <marker date="1510497013123" expanded="true" signature="328:473" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ocado.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="96" column="60" lean-forward="false" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
-          <folding>
-            <element signature="e#281#479#0" expanded="false" />
-            <element signature="e#531#731#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="612">
+          <caret line="46" column="80" lean-forward="false" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>

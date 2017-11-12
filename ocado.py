@@ -7,6 +7,7 @@ def read_orders(filename):
         orders = []
         for line in enumerate(r):
             orders.append(line)
+        f.close()
         return orders
 
 
@@ -29,18 +30,21 @@ def read_my_lines_0(csv_reader, lines_list):
 def fast_load(order_lists):
     order_queries = [[] for x in range(len(order_lists))]
 
+
+
     with open('product.csv') as f:
         reader = csv.reader(f)
         reader = list(reader)
         for i in range(len(order_lists)):
             for j in range(len(order_lists[i])):
-                dict_form = {"SKU_ID": (reader[order_lists[i][j]][0]),
-                             "EACH_HEIGHT": float(reader[order_lists[i][j]][1]),
-                             "EACH_LENGTH": float(reader[order_lists[i][j]][2]),
-                             "EACH_WIDTH": float(reader[order_lists[i][j]][3]),
-                             "EACH_WEIGHT": float(reader[order_lists[i][j]][4]),
-                             "EACH_VOLUME": float(reader[order_lists[i][j]][5]),
-                             "SEGREGATION_CATEGORY": (reader[order_lists[i][j]][6])}
+                #   print(i, j, order_lists[i][j])
+                dict_form = {"SKU_ID": (reader[order_lists[i][j]+1][0]),
+                             "EACH_HEIGHT": float(reader[order_lists[i][j]+1][1]),
+                             "EACH_LENGTH": float(reader[order_lists[i][j]+1][2]),
+                             "EACH_WIDTH": float(reader[order_lists[i][j]+1][3]),
+                             "EACH_WEIGHT": float(reader[order_lists[i][j]+1][4]),
+                             "EACH_VOLUME": float(reader[order_lists[i][j]+1][5]),
+                             "SEGREGATION_CATEGORY": (reader[order_lists[i][j]+1][6])}
                 order_queries[i].append(dict_form)
         f.close()
     return order_queries
@@ -53,7 +57,7 @@ if __name__ == '__main__':
     # Read in all the orders
     orders = read_orders(filename)
 
-    print("Time to t1:", time.time() - t0)
+    # print("Time to t1:", time.time() - t0)
     t1 = time.time()
 
     # Keep track of the total number of orders
@@ -78,14 +82,14 @@ if __name__ == '__main__':
 
         order_lists[index].append(int(orders[i][1]['SKU_ID']))
 
-    print("Time to t2:", time.time() - t1)
+    # print("Time to t2:", time.time() - t1)
     t2 = time.time()
 
     order_queries = []
 
     order_queries = fast_load(order_lists)
 
-    print("Time to t3:", time.time() - t2)
+    # print("Time to t3:", time.time() - t2)
     t3 = time.time()
 
     # at this stage we have order_queries containing a list
@@ -97,13 +101,12 @@ if __name__ == '__main__':
         writer.writerow(['ORDER_ID', 'CONTAINER_ID', 'SKU_ID'])
         for i in range(len(order_queries)):
             result = ocado_solve.process_order(order_queries[i], offset)
-            offset = result[len(result) - 1][0]
+            if len(result) > 0:
+                offset = result[len(result) - 1][0]
 
             for r in result:
-                writer.writerow(list(map(str,[reverse_index_dict[i], r[0], r[1]])))
-
+                writer.writerow(list(map(str, [reverse_index_dict[i], r[0], r[1]])))
 
         o.close()
 
-
-    print("Time to finish:", time.time() - t3)
+    print("Time to finish:", str(time.time() - t0)[:6] + "s")
